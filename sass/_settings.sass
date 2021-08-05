@@ -1,0 +1,128 @@
+@font-face 
+  font-family: 'LatoRegular'
+  src: url('../fonts/LatoRegular.woff2') format('woff2'), url('../fonts/LatoRegular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+@font-face 
+  font-family: 'LatoBold'
+  src: url('../fonts/LatoBold.woff2') format('woff2'), url('../fonts/LatoBold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+@font-face 
+  font-family: 'LatoItalic'
+  src: url('../fonts/LatoItalic.woff2') format('woff2'), url('../fonts/LatoItalic.woff') format('woff')
+  font-weight: normal
+  font-style: italic
+  font-display: swap
+@font-face 
+  font-family: 'RobotoSlabBold'
+  src: url('../fonts/RobotoSlabBold.woff2') format('woff2'), url('../fonts/RobotoSlabBold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+*
+  box-sizing: border-box
+body
+  font-family: 'LatoRegular'
+  background-color: $secondary
+  color: $text-color
+img
+  max-width: 100%
+button, input, textarea
+  &:focus
+    outline: none
+button
+  cursor: pointer
+a
+  text-decoration: none
+.container
+  max-width: 1140px
+  margin: auto
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $light
+  background-color: $primary
+  font-size: 14px
+  line-height: 20px
+  border: none
+  border-radius: 20px
+  padding: 0
+  transition: 0.3s
+  &:hover
+    background-color: $hoverPrimary
+    transition: 0.3s
+  &__text
+    margin-right: 5px
+  &__icon
+    width: 20px
+    height: 20px
+.icon
+  width: 100%
+  height: 100%
+  transition: fill 0.3s
+.comments
+  display: flex
+  align-items: center
+  cursor: pointer
+  &:hover
+    .comments__icon .icon
+      fill: $primary
+      transition: fill 0.3s
+    .comments__count
+      color: $primary
+      transition: color 0.3s
+  &__icon
+    width: 15px
+    height: 15px
+    margin-right: 5px
+    fill: #BCBFC2
+    &--opacity
+      fill: $light
+      opacity: 0.4
+  &__count
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: #939699
+    transition: color 0.3s
+    &--opacity
+      color: $light
+      opacity: 0.4
+.hearts
+  display: flex
+  align-items: center
+  cursor: pointer
+  &:hover
+    .hearts__icon .icon
+      fill: red
+      opacity: 1
+      transition: fill 0.3s
+    .hearts__count
+      color: red
+      transition: color 0.3s
+  &__icon
+    width: 15px
+    height: 15px
+    margin-right: 5px
+    fill: #BCBFC2
+    &--opacity
+      fill: $light
+      opacity: 0.4
+  &__count
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: #939699
+    transition: color 0.3s
+    &--opacity
+      color: $light
+      opacity: 0.4
+.link
+  transition: color 0.3s
+  &:hover
+    color: $primary
+    transition: color 0.3s

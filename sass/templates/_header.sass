@@ -1,0 +1,65 @@
+.navbar
+  background-color: $dark
+  padding: 15px 0 15px 0
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-menu
+    &__list
+      display: flex
+      margin: 0
+      padding: 0
+    &__item
+      padding: 0 30px 0 0
+      list-style-type: none
+      &:last-child
+        padding: 0
+    &__link
+      position: relative
+      font-family: 'LatoBold'
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      color: $light
+      &::after
+        content: ''
+        position: absolute
+        top: 20px
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        height: 3px
+        opacity: 0
+        transition: 0.5s
+        width: 0%
+      &:hover
+        &::after
+          width: 100%
+          background-color: $primary
+          opacity: 1
+          transition: 0.3s
+  &__button
+    width: 261px
+    height: 39px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #656B70
+    color: $light
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    border: none
+    border-radius: $rounding-block
+    padding: 0
+    transition: background-color 0.3s
+    &:hover
+      background-color: #50565a
+      transition: background-color 0.3s
+.logo
+  width: 163px
+  height: 40px
+.burger-button
+  display: none

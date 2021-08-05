@@ -1,0 +1,285 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .navbar
+    &__button
+      width: 200px
+  .main
+    &-article
+      &__promo
+        min-width: 700px
+        padding-right: 170px
+  .other-articles
+    grid-template: repeat(8, 1fr) / repeat(4, 1fr)
+    grid-template-areas: "card-1 card-1 card-1 card-1" "card-1 card-1 card-1 card-1" "card-2 card-2 card-5 card-5" "card-2 card-2 card-5 card-5" "card-6 card-6 card-7 card-7" "card-8 card-8 card-9 card-9" "card-4 card-4 card-3 card-3" "card-4 card-4 card-10 card-10"
+  .card
+    display: flex
+    flex-direction: column
+    &:not(:nth-child(4))
+      justify-content: space-between
+    &-news
+      display: block
+      width: auto
+    &-social
+      padding: 20px 20px 30px 20px
+      &__title
+        margin-bottom: 10px
+    &__wrapper
+      &--middle
+        width: auto
+        height: 220px
+    &--image
+      padding-top: 100px
+  .check-list
+    &__top
+      padding: 15px 20px 20px 20px
+  .tags
+    &__wrapper
+      justify-content: space-around
+@media (max-width: 992px)
+  .container
+    max-width: 720px
+  .logo
+    width: 90px
+    height: auto
+  .navbar
+    &-menu
+      &__item
+        padding-right: 15px
+      &__link
+        &:hover
+          &::after
+            display: none
+    &__button
+      width: 150px
+      font-size: 12px
+      &:hover
+        background-color: #656B70
+  .main
+    &-article
+      &__promo
+        min-width: 450px
+        max-width: 450px
+        padding: 35px
+      &__title
+        font-size: 36px
+  .recommendations
+    &__title
+      padding: 15px 15px 15px 15px
+    &__item
+      padding: 15px 15px 15px 15px
+      height: 90px
+      &:last-child
+        height: 90px
+  .link
+    &:hover
+      color: $dark
+    &--light
+      &:hover
+        color: $light !important
+  .popular
+    &-articles
+      overflow-x: auto 
+      &__item
+        min-width: 50%
+  .other-articles
+    grid-template: repeat(8, 1fr) / repeat(4, 1fr)
+    grid-template-areas: "card-1 card-1 card-1 card-1" "card-1 card-1 card-1 card-1" "card-2 card-2 card-5 card-5" "card-2 card-2 card-5 card-5" "card-6 card-6 card-7 card-7" "card-8 card-8 card-9 card-9" "card-10 card-10 card-3 card-3" "card-4 card-4 card-4 card-4"
+    .card
+      &:nth-child(3)
+        justify-content: center
+      &:nth-child()
+        display: none
+      &__title
+        &--while
+          &:hover
+            color: $light
+    .tags
+      &__wrapper
+        padding-left: 10px
+        padding-top: 15px
+    .card
+      &-social
+        &__icon
+          &:hover
+            transform: scale(1)
+  .link
+    &--while
+      &:hover
+        color: $light
+  .button
+    &:hover
+      background-color: $primary
+@media (max-width: 768px)
+  .container
+    max-width: 576px
+  .navbar
+    &-menu
+      &__list
+        &--mobile
+          &--hidden
+            display: none
+    &__button
+      &--mobile
+        &--hidden
+          display: none
+  .burger-button
+    position: relative
+    display: flex
+    width: 16px
+    height: 11px
+    padding: 0
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+    border: none
+    background-color: inherit
+    cursor: pointer
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      width: 16px
+      height: 1px
+      background-color: $light
+      transition: 0.4s
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      width: 16px
+      height: 1px
+      background-color: $light
+      transition: 0.4s
+    &__line
+      position: absolute
+      top: 5px
+      width: 16px
+      height: 1px
+      background-color: $light
+      transition: 0.4s
+  .main
+    &__wrapper
+      height: 375px
+    &-article
+      &__promo
+        min-width: 400px
+        max-width: 400px
+        padding: 35px
+      &__title
+        font-size: 24px
+        line-height: 40px
+  .recommendations
+    min-width: auto
+    &__list
+      overflow-y: auto
+      height: 350px
+    &__item
+      height: 50%
+      &:last-child
+        height: 50%
+    &__text
+      height: auto
+  .other-articles
+    grid-template: repeat(12, 1fr) / repeat(4, 1fr)
+    grid-template-areas: "card-1 card-1 card-1 card-1" "card-1 card-1 card-1 card-1" "card-2 card-2 card-2 card-2" "card-2 card-2 card-2 card-2" "card-5 card-5 card-5 card-5" "card-5 card-5 card-5 card-5" "card-6 card-6 card-6 card-6" "card-7 card-7 card-7 card-7" "card-8 card-8 card-8 card-8" "card-9 card-9 card-9 card-9" "card-3 card-3 card-10 card-10" "card-4 card-4 card-4 card-4"
+  .card
+    &__wrapper
+      &--middle
+        height: 300px
+  .tag
+    font-size: 12px
+    margin-right: 5px
+    margin-bottom: 5px
+@media (max-width: 610px)
+  .container
+     width: 88%
+  .main
+    &-article
+      &__promo
+        min-width: auto
+        width: 100%
+      &__title
+        font-size: 22px
+        line-height: 30px
+  .recommendations
+    width: 30%
+    &__title
+      font-size: 11px
+  .popular
+    &-articles
+      &__item
+        min-width: 100%
+        justify-content: space-evenly
+        padding-right: 0 !important
+        padding-left: 0 !important
+      &__title
+        margin-right: 50px
+  .card
+    &-news
+      &__bg
+        display: none
+      &__wrapper
+        border-bottom: none
+        padding-right: 70px
+    &-social
+      padding: 15px
+      justify-content: space-evenly !important
+    &__wrapper
+      &--middle
+        height: 230px
+    &__bottom
+      display: none
+  .other-articles
+    display: flex
+    flex-direction: column
+  .tags
+    &__title
+      margin: 10px 15px
+  .tag
+    margin-bottom: 15px
+@media (max-width: 470px)
+  .main
+    &-article
+      flex-direction: column
+      &__promo
+        height: 350px
+        min-width: 100%
+      &__category
+        display: none
+      &__title
+        font-size: 20px
+    &__wrapper
+      height: 500px
+  .recommendations
+    width: 100%
+    &__list
+      display: flex
+      height: 130px
+    &__item
+      height: 100%
+      min-width: 50%
+      border-bottom: none
+      padding: 10px
+      border-right: 1px solid #D9DADB
+      &:last-child
+        height: 100%
+        border-right: none
+    &__text
+      font-size: 13px
+  .check-list
+    &__title
+      font-size: 14px
+  .card
+    &-news
+      &__wrapper
+        padding: 30px
+  .popular
+    &-articles
+      &__item
+        &:not(:last-child)
+          margin-right: 25px
+          padding-right: 35px !important
+      &__title
+        margin-right: 5px
+        width: 150px
