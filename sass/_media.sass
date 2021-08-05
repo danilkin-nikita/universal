@@ -36,6 +36,11 @@
   .tags
     &__wrapper
       justify-content: space-around
+  .main
+    &-news
+      &__wrapper
+        padding-right: 20px
+        padding-left: 20px
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -110,6 +115,14 @@
   .button
     &:hover
       background-color: $primary
+  .main
+    &-news
+      &__wrapper
+        padding-right: 0
+        padding-left: 0
+      &__title
+        font-size: 30px
+        line-height: 35px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -238,6 +251,11 @@
       margin: 10px 15px
   .tag
     margin-bottom: 15px
+  .main
+    &-news
+      &__title
+        font-size: 20px
+        line-height: 24px
 @media (max-width: 470px)
   .main
     &-article
