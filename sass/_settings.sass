@@ -40,6 +40,10 @@ a
 .container
   max-width: 1140px
   margin: auto
+  &--flex
+    display: flex
+    justify-content: space-between
+    align-items: start
 .button
   display: flex
   align-items: center
@@ -123,6 +127,7 @@ a
       opacity: 0.4
 .link
   transition: color 0.3s
+  cursor: pointer
   &:hover
     color: $primary
     transition: color 0.3s
