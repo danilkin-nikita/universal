@@ -1,0 +1,181 @@
+.useful
+  &-articles
+    padding-top: 60px
+    padding-bottom: 60px
+    background-color: $dark
+    &__grid
+      display: grid
+      grid-template-rows: repeat(3, 1fr)
+      grid-template-columns: repeat(4, 1fr)
+      gap: 30px
+  &-article
+    position: relative
+    background-color: #B4D1E0
+    border-radius: $rounding-block
+    overflow: hidden
+    z-index: 0
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: space-between
+    padding-left: 35px
+    padding-top: 35px
+    padding-right: 290px
+    padding-bottom: 50px
+    &--small
+      padding: 25px 25px 30px 25px
+      grid-row: auto
+      grid-column: auto
+      background-color: $light
+    &__image
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      z-index: -1
+      object-fit: cover
+    &__category
+      font-family: 'LatoBold'
+      font-weight: 900
+      font-size: 12px
+      line-height: 15px
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      color: #6E99AE
+      margin-bottom: 20px
+    &__title
+      font-family: 'RobotoSlabBold'
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      color: $dark
+      margin-top: 0
+      margin-bottom: 15px
+      &--small
+        font-size: 16px
+        line-height: 25px
+        margin-top: 0
+        margin-bottom: 5px
+    &__text
+      font-size: 14px
+      line-height: 20px
+      margin-top: 0
+      margin-bottom: 0
+      &--small
+        margin-bottom: 0
+    &__button
+      width: 154px
+      height: 40px
+    &__date
+      font-size: 12px
+      line-height: 15px
+      color: #939699
+    &__wrapper
+      display: flex
+      flex-direction: column
+.big-article
+  grid-column: 3 / 5
+  grid-row: 1 / 3
+.articles
+  &-slider
+    grid-row: 1 / 4
+    grid-column: 1 / 3
+    overflow: hidden
+    width: 555px
+    height: 100%
+    & .swiper
+      &-pagination
+        bottom: 40px
+        &-bullet
+          background-color: $light
+          margin-right: 10px !important
+          margin-left: 10px !important
+          &:hover
+            transform: scale(1.4)
+    &__slide
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      border-radius: $rounding-block
+      overflow: hidden
+      padding: 50px 50px 165px 50px
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
+    &__bg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: -1
+    &__wrapper
+      z-index: 1
+    &__category
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      left: 18px
+      top: 18px
+      height: 25px
+      width: 67px
+      background-color: #3DC47E
+      color: $light
+      border-radius: 3px
+      border: none
+      font-size: 12px
+      line-height: 15px
+    &__user
+      display: flex
+      flex-direction: column
+      align-items: center
+      z-index: 1
+      margin-bottom: 30px
+      &-avatar
+        height: 45px
+        width: 45px
+        border-radius: 50%
+        margin-bottom: 8px
+        z-index: 1
+      &-name
+        font-size: 14px
+        line-height: 20px
+        color: $light
+        opacity: 0.85
+      &-position
+        font-size: 12px
+        line-height: 15px
+        color: $light
+        opacity: 0.4
+    &__title
+      font-family: 'RobotoSlabBold'
+      font-weight: bold
+      font-size: 40px
+      line-height: 50px
+      color: $light
+      text-align: center
+      z-index: 1
+      margin-top: 0
+      margin-bottom: 0
+    &__button
+      width: 194px
+      height: 40px
+      z-index: 1
+      cursor: pointer
+      & .button__text
+        margin-right: 8px
+        margin-left: 8px

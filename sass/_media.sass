@@ -48,6 +48,19 @@
       &-wrapper
         max-height: 300px
         min-width: 170px
+  .articles
+    &-slider
+      grid-row: 1 / 3
+      grid-column: 1 / 4
+      width: 100%
+  .big-article
+    grid-row: 3 / 4
+    grid-column: 1 / 5
+  .useful
+    &-article
+      &__image
+        left: auto
+        width: auto
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -157,6 +170,25 @@
         &-wrapper
           min-width: 100px
           min-height: 100px
+  .bookmark
+    &__icon
+      &:hover
+        fill: #939699 !important
+  .useful
+    &-articles
+      &__grid
+        grid-template-rows: 1fr 230px 350px
+  .articles
+    &-slider
+      grid-column: 1 / 5
+      grid-row: span 1
+      width: 100%
+      height: 500px
+      &__slide
+        padding-bottom: 80px
+  .small-article
+    grid-row: 2 / 3
+    grid-column: span 2
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -318,6 +350,19 @@
     &__icon
       top: initial
       bottom: 0
+  .big-article
+    padding-right: 220px
+  .useful
+    &-article
+      &__title
+        font-size: 16px
+        line-height: 25px
+        margin-bottom: 5px
+  .articles
+    &-slider
+      &__title
+        font-size: 24px
+        line-height: 30px
 @media (max-width: 470px)
   .main
     &-article
@@ -363,3 +408,16 @@
       &__title
         margin-right: 5px
         width: 150px
+  .useful
+    &-articles
+      &__grid
+        grid-template-rows: 1fr 230px 230px 300px
+    &-article
+      &__image
+        display: none
+  .small-article
+    grid-row: auto
+    grid-column: span 4
+  .big-article
+    grid-row: 4 / 5
+    padding: 30px

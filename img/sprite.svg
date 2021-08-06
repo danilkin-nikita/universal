@@ -30,4 +30,7 @@
   <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="bookmark">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1h10a2 2 0 012 2v16l-6.905-5L3 19V3a2 2 0 012-2z" ></path>
   </symbol>
+   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" id="images">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 6V4a1 1 0 011-1h14a1 1 0 011 1v10a1 1 0 01-1 1h-2v2a1 1 0 01-1 1h-14a1 1 0 01-1-1V7a1 1 0 011-1h2zm12 9h-11a1 1 0 01-1-1V7h-2v10h14v-2zM4.5 4v10h14V4h-14zm14 10h-14v-1l3-3 3 2 4-4 4 5v1zM10 9a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="#fff"></path>
+  </symbol>
 </svg>

@@ -28,8 +28,6 @@ const tabs = () => {
 tabs();
 
 const addToBookmarks = () => {
-  let bookmark = document.querySelectorAll(".bookmark__icon");
-
   document.addEventListener("click", (event) => {
     let target = event.target;
 
@@ -40,3 +38,15 @@ const addToBookmarks = () => {
 };
 
 addToBookmarks();
+
+const articlesSlider = new Swiper(".articles-slider", {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
