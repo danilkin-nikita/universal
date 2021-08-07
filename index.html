@@ -18,13 +18,13 @@
         <nav class="navbar-menu">
           <ul class="navbar-menu__list navbar-menu__list--mobile--hidden">
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Статьи</a>
+              <a href="#articles" class="navbar-menu__link">Статьи</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Новости</a>
+              <a href="#news" class="navbar-menu__link">Новости</a>
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Горячее</a>
+              <a href="#hotter" class="navbar-menu__link">Горячее</a>
             </li>
             <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">HTML</a>
@@ -48,6 +48,31 @@
         </button>
       </div>
     </header>
+    <menu class="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="#articles" class="mobile-menu__link">Статьи</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#news" class="mobile-menu__link">Новости</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#hotter" class="mobile-menu__link">Горячее</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link">HTML</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link">CSS</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link">JavaScript</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link">Web Design</a>
+        </li>
+      </ul>
+    </menu>
     <section class="main">
       <div class="main__wrapper"></div>
       <div class="container">
@@ -274,7 +299,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="articles">
+    <section class="articles" id="articles">
       <div class="container">
         <div class="popular-articles">
           <div class="popular-articles__item">
@@ -561,7 +586,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="main-news">
+    <section class="main-news" id="news">
       <img src="img/news/news-bg.jpg" alt="Фон" class="main-news__image" />
       <div class="container">
         <div class="main-news__wrapper">
@@ -1034,7 +1059,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="useful-articles">
+    <section class="useful-articles" id="hotter">
       <div class="container">
         <div class="useful-articles__grid">
           <div class="swiper-container articles-slider">

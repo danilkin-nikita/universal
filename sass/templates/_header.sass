@@ -63,3 +63,41 @@
   height: 40px
 .burger-button
   display: none
+.mobile
+  &-menu
+    background-color: $dark
+    position: fixed
+    top: 56px
+    bottom: 0
+    left: -100%
+    right: 100%
+    z-index: 99
+    padding: 0
+    margin: 0
+    transition: left 0.4s ease-out, right 0.4s ease-out
+    &__list
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 0
+      padding-top: 30px
+      margin: 0
+      list-style: none
+      overflow-y: auto
+      height: 100%
+    &__link
+      font-family: 'LatoBold'
+      font-weight: 900
+      font-size: 16px
+      line-height: 20px
+      color: $light
+    &__item
+      margin-bottom: 25px
+  &-menu
+    &--active
+      right: 0
+      left: 0
+      display: block
+      transition: left 0.4s ease-out, right 0.4s ease-out
+.scroll-menu
+  overflow: hidden

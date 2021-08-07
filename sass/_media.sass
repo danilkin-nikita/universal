@@ -56,6 +56,8 @@
   .big-article
     grid-row: 3 / 4
     grid-column: 1 / 5
+  .small-article
+    height: auto
   .useful
     &-article
       &__image
@@ -190,9 +192,16 @@
     grid-row: 2 / 3
     grid-column: span 2
 @media (max-width: 768px)
+  body
+    margin-top: 56px
   .container
     max-width: 576px
   .navbar
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 10
     &-menu
       &__list
         &--mobile
@@ -206,7 +215,8 @@
     position: relative
     display: flex
     width: 16px
-    height: 11px
+    min-height: 11px
+    max-height: 11px
     padding: 0
     align-items: center
     justify-content: space-between
@@ -236,10 +246,24 @@
       width: 16px
       height: 1px
       background-color: $light
-      transition: 0.4s
+    &--active &__line
+        transform: rotate(-38deg)
+        opacity: 0
+        transition: 0.4s
+    &--active
+      &::after
+        transform: rotate(-38deg)
+        top: 5px
+        transition: 0.4s
+      &::before
+        transform: rotate(38deg)
+        bottom: 5px
+        transition: 0.4s
   .main
+    padding-top: 30px
+    margin-top: 0
     &__wrapper
-      height: 375px
+      height: 405px
     &-article
       &__promo
         min-width: 400px

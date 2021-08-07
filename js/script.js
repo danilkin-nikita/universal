@@ -49,4 +49,25 @@ const articlesSlider = new Swiper(".articles-slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  effect: "fade",
 });
+
+const toogleMobileMenu = () => {
+  let menuButton = document.querySelector(".burger-button"),
+    navbarMenu = document.querySelector(".mobile-menu");
+
+  document.addEventListener("click", (event) => {
+    let target = event.target;
+
+    if (
+      target.closest(".burger-button") ||
+      target.closest(".mobile-menu__link")
+    ) {
+      navbarMenu.classList.toggle("mobile-menu--active");
+      menuButton.classList.toggle("burger-button--active");
+      document.body.classList.toggle("scroll-menu");
+    }
+  });
+};
+
+toogleMobileMenu();
