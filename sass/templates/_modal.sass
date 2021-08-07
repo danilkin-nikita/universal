@@ -1,0 +1,181 @@
+.modal
+  position: relative
+  &__overlay
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(40, 47, 54, 0.8)
+    z-index: 100
+    visibility: hidden
+    opacity: 0
+    &--visible
+      visibility: visible
+      opacity: 1
+      transition: opacity 0.3s
+  &__dialog
+    display: block
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    min-width: 360px
+    max-width: 360px
+    max-height: 100%
+    overflow-y: auto
+    background-color: $light
+    padding: 30px 35px 40px 35px
+    z-index: 101
+    border-radius: $rounding-block
+    visibility: hidden
+    opacity: 0
+    &--visible
+      visibility: visible
+      opacity: 1
+      transition: opacity 0.3s
+  &__close
+    position: absolute
+    right: 17px
+    top: 17px
+    width: 20px
+    height: 20px
+    background-color: inherit
+    border: none
+    cursor: pointer
+    z-index: 103
+    &::after, &::before
+      content: ''
+      position: absolute
+      right: 0
+      left: 0
+      transform: rotate(-38deg)
+      width: 20px
+      height: 2px
+      background-color: #BCBFC2
+      transition: 0.3s
+    &::after
+      transform: rotate(-38deg)
+    &::before
+      transform: rotate(38deg)
+    &:hover
+      animation-name: reversal
+      animation-duration: 0.3s
+      animation-timing-function: ease
+      animation: reversal 0.3s easy
+  &__title
+    position: relative
+    font-family: 'RobotoSlabBold'
+    font-weight: bold
+    font-size: 20px
+    line-height: 25px
+    color: $dark
+    margin-top: 0
+    margin-bottom: 25px
+    z-index: 104
+  &__text
+    font-family: 'LatoBold'
+    display: block
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    color: $dark
+    margin-top: 0
+    margin-bottom: 5px
+  &__select
+    background: #FFFFFF
+    border: 1px solid #D9DADB
+    border-radius: 5px
+    font-size: 14px
+    line-height: 20px
+    width: 100%
+    height: 40px
+    padding-right: 15px
+    padding-left: 15px
+    margin-top: 0
+    margin-bottom: 15px
+    color: #939699
+    & option
+      font-size: 14px
+      color: $text-color
+  &__message
+    background: #FFFFFF
+    border: 1px solid #D9DADB
+    border-radius: 5px
+    font-size: 14px
+    line-height: 20px
+    width: 100%
+    height: 120px
+    padding-right: 15px
+    padding-left: 15px
+    margin-top: 0
+    margin-bottom: 15px
+    resize: none
+    padding: 10px 15px
+    color: $text-color
+    transition: box-shadow 0.2s
+    &:focus
+      -webkit-box-shadow: 1px 1px 6px 2px rgba(24, 140, 229, 0.8)
+      -moz-box-shadow: 1px 1px 6px 2px rgba(24, 140, 229, 0.8)
+      box-shadow: 1px 1px 6px 2px rgba(24, 140, 229, 0.8)
+      border-color: rgba(24, 140, 229, 0.8)
+      transition: box-shadow 0.2s
+  &__input
+    width: 100%
+    height: 40px
+    margin-bottom: 15px
+  &__button
+    width: 122px
+    height: 40px
+  &__checkbox
+    width: 20px
+    height: 20px
+    margin-right: 10px
+    cursor: pointer
+    &-wrapper
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+    &-text
+      font-size: 14px
+      line-height: 20px
+      color: $text-color
+      cursor: pointer
+  &__status
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background-color: $light
+    z-index: 102
+    padding: 30px 35px 40px 35px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    display: none
+    &--visible
+      display: flex
+    &-button
+      width: 122px
+      height: 40px
+.status
+  &__message
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-family: 'LatoBold'
+    display: block
+    font-weight: 900
+    font-size: 16px
+    line-height: 20px
+    color: #262D33
+  &__preloader
+    max-width: 70px
+    max-height: 70px
+@keyframes reversal
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(180deg)

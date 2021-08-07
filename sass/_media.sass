@@ -63,6 +63,10 @@
       &__image
         left: auto
         width: auto
+  .footer
+    &-nav
+      grid-template-columns: repeat(6, 1fr)
+      margin-bottom: 0
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -191,6 +195,27 @@
   .small-article
     grid-row: 2 / 3
     grid-column: span 2
+  .footer
+    &-form
+      &__title
+        font-size: 30px
+    &-nav
+      grid-template-columns: repeat(3, 1fr)
+    &__other
+      flex-wrap: wrap
+      justify-content: center
+      padding-bottom: 25px
+    &__text:not(:last-child)
+      margin-bottom: 40px
+    &__wrapper
+      flex-wrap: wrap
+      justify-content: center
+    &__list
+      margin-bottom: 35px
+      justify-content: space-between
+      flex-basis: 100%
+    &__link
+      margin-right: 0
 @media (max-width: 768px)
   body
     margin-top: 56px
@@ -298,6 +323,11 @@
     &__image
       &-wrapper
         min-width: 220px
+  .footer
+    &__social
+      &-link
+        &:hover
+          transform: scale(1)
 @media (max-width: 610px)
   .container
      width: 88%
@@ -387,6 +417,28 @@
       &__title
         font-size: 24px
         line-height: 30px
+  .footer
+    &-nav
+      grid-template-columns: repeat(2, 1fr)
+    &-form
+      &__title
+        font-size: 20px
+        line-height: 24px
+      &__wrapper
+        flex-wrap: wrap
+        justify-content: center
+      &__input
+        flex-basis: 100%
+        margin-bottom: 25px
+        width: auto
+    &__logo
+      display: none
+    &__list
+      flex-wrap: wrap
+      justify-content: flex-start
+    &__link
+      margin-bottom: 15px
+      flex-basis: 50%
 @media (max-width: 470px)
   .main
     &-article
@@ -445,3 +497,12 @@
   .big-article
     grid-row: 4 / 5
     padding: 30px
+  .modal
+    &__dialog
+      max-width: 85%
+      min-width: 85%
+      padding: 25px
+@media (max-width: 360px)
+  .footer
+    &-nav
+      grid-template-columns: repeat(1, 1fr)
