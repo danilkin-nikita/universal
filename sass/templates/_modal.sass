@@ -142,35 +142,32 @@
       color: $text-color
       cursor: pointer
   &__status
-    position: absolute
-    top: 0
-    right: 0
-    left: 0
-    bottom: 0
-    background-color: $light
-    z-index: 102
-    padding: 30px 35px 40px 35px
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
     display: none
-    &--visible
-      display: flex
-    &-button
-      width: 122px
-      height: 40px
-.status
-  &__message
-    position: absolute
+    position: fixed
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    font-family: 'LatoBold'
-    display: block
-    font-weight: 900
-    font-size: 16px
-    line-height: 20px
-    color: #262D33
+    min-width: 360px
+    max-width: 360px
+    max-height: 534px
+    overflow-y: auto
+    background-color: $light
+    padding: 30px 35px 40px 35px
+    z-index: 101
+    border-radius: $rounding-block
+    &--visible
+      display: block
+    &-button
+      width: 122px
+      height: 40px
+    &-message
+      font-family: 'LatoBold'
+      display: block
+      font-weight: 900
+      font-size: 16px
+      line-height: 20px
+      color: #262D33
+      margin-bottom: 40px
   &__preloader
     max-width: 70px
     max-height: 70px

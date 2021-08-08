@@ -55,7 +55,7 @@
         </button>
       </div>
     </header>
-    <menu class="mobile-menu">
+    <div class="mobile-menu">
       <ul class="mobile-menu__list">
         <li class="mobile-menu__item">
           <a href="#articles" class="mobile-menu__link scroll-link">Статьи</a>
@@ -79,7 +79,7 @@
           <a href="#" class="mobile-menu__link">Web Design</a>
         </li>
       </ul>
-    </menu>
+    </div>
     <section class="main">
       <div class="main__wrapper"></div>
       <div class="container">
@@ -655,7 +655,7 @@
                   </div>
                   <span class="hearts__count">830</span>
                 </div>
-                <div class="bookmark__icon">
+                <div class="bookmark">
                   <svg class="icon">
                     <use xlink:href="img/sprite.svg#bookmark"></use>
                   </svg>
@@ -705,7 +705,7 @@
                   </div>
                   <span class="hearts__count">129</span>
                 </div>
-                <div class="bookmark__icon">
+                <div class="bookmark">
                   <svg class="icon">
                     <use xlink:href="img/sprite.svg#bookmark"></use>
                   </svg>
@@ -756,7 +756,7 @@
                   </div>
                   <span class="hearts__count">284</span>
                 </div>
-                <div class="bookmark__icon">
+                <div class="bookmark">
                   <svg class="icon">
                     <use xlink:href="img/sprite.svg#bookmark"></use>
                   </svg>
@@ -807,7 +807,7 @@
                   </div>
                   <span class="hearts__count">1.293</span>
                 </div>
-                <div class="bookmark__icon">
+                <div class="bookmark">
                   <svg class="icon">
                     <use xlink:href="img/sprite.svg#bookmark"></use>
                   </svg>
@@ -857,7 +857,7 @@
                   </div>
                   <span class="hearts__count">82</span>
                 </div>
-                <div class="bookmark__icon">
+                <div class="bookmark">
                   <svg class="icon">
                     <use xlink:href="img/sprite.svg#bookmark"></use>
                   </svg>
@@ -910,7 +910,7 @@
                   </div>
                   <span class="hearts__count">432</span>
                 </div>
-                <div class="bookmark__icon">
+                <div class="bookmark">
                   <svg class="icon">
                     <use xlink:href="img/sprite.svg#bookmark"></use>
                   </svg>
@@ -1368,26 +1368,31 @@
           </div>
           <!-- /.footer-nav__column -->
         </nav>
-        <div class="footer-communication footer__communication">
-          <div class="footer__wrapper">
-            <div class="footer__list">
-              <a href="index.html" class="footer__logo">
+        <div class="footer-communication">
+          <div class="footer-communication__wrapper">
+            <div class="footer-communication__list">
+              <a href="index.html" class="footer-communication__logo">
                 <svg class="icon">
                   <use xlink:href="img/sprite.svg#footer-logo"></use>
                 </svg>
               </a>
-              <a href="#" class="footer__link link">Контакты</a>
-              <a href="#" class="footer__link link">Работа у нас</a>
-              <a href="#" class="footer__link link">Реклама</a>
-              <a href="#" class="footer__link link" data-toggle="modal"
+              <a href="#" class="footer-communication__link link">Контакты</a>
+              <a href="#" class="footer-communication__link link"
+                >Работа у нас</a
+              >
+              <a href="#" class="footer-communication__link link">Реклама</a>
+              <a
+                href="#"
+                class="footer-communication__link link"
+                data-toggle="modal"
                 >Обратная связь</a
               >
             </div>
-            <div class="footer__social-links">
+            <div class="footer-communication__social-links">
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
-                class="footer__social-link"
+                class="footer-communication__social-link"
               >
                 <svg class="icon">
                   <use xlink:href="img/sprite.svg#fb"></use>
@@ -1396,7 +1401,7 @@
               <a
                 href="https://twitter.com/"
                 target="_blank"
-                class="footer__social-link"
+                class="footer-communication__social-link"
               >
                 <svg class="icon">
                   <use xlink:href="img/sprite.svg#twitter"></use>
@@ -1405,7 +1410,7 @@
               <a
                 href="https://www.youtube.com/"
                 target="_blank"
-                class="footer__social-link"
+                class="footer-communication__social-link"
               >
                 <svg class="icon">
                   <use xlink:href="img/sprite.svg#youtube"></use>
@@ -1414,7 +1419,7 @@
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
-                class="footer__social-link"
+                class="footer-communication__social-link"
               >
                 <svg class="icon">
                   <use xlink:href="img/sprite.svg#inst"></use>
@@ -1426,14 +1431,14 @@
           <!-- /.footer__wrapper -->
         </div>
         <!-- /.footer-communication -->
-        <div class="footer__other">
-          <p class="footer__text">
+        <div class="footer-other">
+          <p class="footer-other__text">
             Universal — это онлайн издание, в котором мы публикуем полезные
             материалы о веб разработке: статьи, новости, видеоуроки, подборки,
             ссылки и курсы. Материалы на сайте бесплатны, но при копировании,
             указывайте ссылку.
           </p>
-          <span class="footer__text">© 2020 Universal Magazine</span>
+          <span class="footer-other__text">© 2020 Universal Magazine</span>
         </div>
         <!-- /.footer__other -->
       </div>
@@ -1448,20 +1453,24 @@
           <span class="modal__text">Тема</span>
           <select name="theme" class="modal__select">
             <option value="" style="display: none">Выберите тему</option>
-            <option value="t1">Работа у нас</option>
-            <option value="t2">Публикация статьи</option>
-            <option value="t3">Публикация новости</option>
+            <option value="Работа у нас">Работа у нас</option>
+            <option value="Публикация статьи">Публикация статьи</option>
+            <option value="Публикация новости">Публикация новости</option>
           </select>
           <span class="modal__text">Сообщение</span>
           <textarea name="message" class="modal__message"></textarea>
           <span class="modal__text">Email</span>
-          <input type="email" class="modal__input input" required />
+          <input
+            type="email"
+            name="email"
+            class="modal__input input"
+            required
+          />
           <div class="modal__checkbox-wrapper">
             <input
               class="modal__checkbox"
               type="checkbox"
               id="processing"
-              name="processing"
               required
             />
             <label class="modal__checkbox-text" for="processing"
@@ -1470,11 +1479,14 @@
           </div>
           <button class="modal__button button">Отправить</button>
         </form>
-        <div class="modal__status">
-          <button class="modal__status-button button">Ок</button>
-        </div>
       </div>
       <!-- /.modal__dialog -->
+      <div class="modal__status">
+        <button class="modal__close"></button>
+        <h3 class="modal__title">Статус отправки</h3>
+        <div class="modal__status-message">Тестовый текст</div>
+        <button class="modal__status-button button">Ок</button>
+      </div>
     </div>
     <!-- /.modal -->
     <script src="js/swiper-bundle.min.js"></script>

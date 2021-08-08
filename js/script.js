@@ -31,8 +31,8 @@ const addToBookmarks = () => {
   document.addEventListener("click", (event) => {
     let target = event.target;
 
-    if (target.closest(".bookmark__icon")) {
-      target.classList.toggle("bookmark__icon--active");
+    if (target.closest(".bookmark")) {
+      target.classList.toggle("bookmark--active");
     }
   });
 };
@@ -87,7 +87,8 @@ navigation();
 
 const toogleModal = () => {
   const modalOverlay = document.querySelector(".modal__overlay"),
-    modalDialog = document.querySelector(".modal__dialog");
+    modalDialog = document.querySelector(".modal__dialog"),
+    modalStatus = document.querySelector(".modal__status");
 
   const openModal = () => {
     modalOverlay.classList.add("modal__overlay--visible");
@@ -97,6 +98,8 @@ const toogleModal = () => {
   const closeModal = () => {
     modalOverlay.classList.remove("modal__overlay--visible");
     modalDialog.classList.remove("modal__dialog--visible");
+    modalDialog.classList.remove("modal__dialog--visible");
+    modalStatus.classList.remove("modal__status--visible");
   };
 
   document.addEventListener("click", (event) => {
@@ -107,7 +110,11 @@ const toogleModal = () => {
       openModal();
     }
 
-    if (target.closest(".modal__close") || target.matches(".modal__overlay")) {
+    if (
+      target.closest(".modal__close") ||
+      target.matches(".modal__overlay") ||
+      target.closest(".modal__status-button")
+    ) {
       closeModal();
     }
   });
@@ -115,7 +122,7 @@ const toogleModal = () => {
   document.addEventListener("keydown", (event) => {
     if (
       event.keyCode === 27 &&
-      modalDialog.classList.contains("modal__dialog--visible")
+      modalOverlay.classList.contains("modal__overlay--visible")
     ) {
       closeModal();
     }
@@ -125,18 +132,14 @@ const toogleModal = () => {
 toogleModal();
 
 const sendForm = () => {
-  const statusMessage = document.createElement("div"),
+  const statusMessage = document.querySelector(".modal__status-message"),
     modalOverlay = document.querySelector(".modal__overlay"),
     modalDialog = document.querySelector(".modal__dialog"),
     modalStatus = document.querySelector(".modal__status");
 
   const resetForm = () => {
     if (modalDialog.classList.contains("modal__dialog--visible")) {
-      setTimeout(() => {
-        modalOverlay.classList.remove("modal__overlay--visible");
-        modalDialog.classList.remove("modal__dialog--visible");
-        modalStatus.classList.remove("modal__status--visible");
-      }, 7000);
+      modalDialog.classList.remove("modal__dialog--visible");
     }
   };
 
@@ -147,10 +150,11 @@ const sendForm = () => {
     if (target.matches("form")) {
       const formData = new FormData(target);
 
+      resetForm();
+
+      modalOverlay.classList.add("modal__overlay--visible");
       modalStatus.classList.add("modal__status--visible");
-      statusMessage.classList.add("status__message");
-      modalStatus.appendChild(statusMessage);
-      statusMessage.innerHTML = `<img class="status__preloader" src="./img/loading.svg">`;
+      statusMessage.innerHTML = `<img class="modal__preloader" src="./img/loading.svg">`;
 
       postData(formData)
         .then((response) => {
@@ -159,12 +163,10 @@ const sendForm = () => {
           }
           statusMessage.textContent =
             "Сообщение отправлено! Мы скоро с вами свяжемся.";
-          resetForm();
         })
         .catch((error) => {
           console.error(error);
           statusMessage.textContent = "Что-то пошло не так...";
-          resetForm();
         });
       target.reset();
     }

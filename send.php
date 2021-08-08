@@ -7,31 +7,22 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$theme = $_POST['theme'];
 $email = $_POST['email'];
 
 // Формирование самого письма
-if (isset($name) and isset($phone) and isset($message) and isset($email)) {
-    $title = "Новое обращение Best Tour Plan";
+if (isset($theme) and isset($message) and isset($email)) {
+    $title = "Новое обращение";
     $body = "
-    <h2>Новое обращение</h2>
-    <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br>
-    <b>Email:</b> $email<br><br>
-    <b>Сообщение:</b><br>$message
+    <h2>$theme</h2>
+    <b>Сообщение:</b><br>$message<br><br>
+    <b>Email:</b> $email
     ";
-} else if (isset($email)) {
+} else {
     $title = "Новая подписка на рассылку";
     $body = "
     <h2>Подписка</h2>
     <b>Email:</b> $email
-    ";
-} else {
-    $title = "Новое обращение Best Tour Plan";
-    $body = "
-    <h2>Новое обращение</h2>
-    <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message
     ";
 }
 

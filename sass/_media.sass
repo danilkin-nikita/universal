@@ -201,21 +201,22 @@
         font-size: 30px
     &-nav
       grid-template-columns: repeat(3, 1fr)
-    &__other
+    &-other
       flex-wrap: wrap
       justify-content: center
       padding-bottom: 25px
-    &__text:not(:last-child)
-      margin-bottom: 40px
-    &__wrapper
-      flex-wrap: wrap
-      justify-content: center
-    &__list
-      margin-bottom: 35px
-      justify-content: space-between
-      flex-basis: 100%
-    &__link
-      margin-right: 0
+      &__text:not(:last-child)
+        margin-bottom: 40px
+    &-communication
+      &__wrapper
+        flex-wrap: wrap
+        justify-content: center
+      &__list
+        margin-bottom: 35px
+        justify-content: space-between
+        flex-basis: 100%
+      &__link
+        margin-right: 0
 @media (max-width: 768px)
   body
     margin-top: 56px
@@ -324,10 +325,11 @@
       &-wrapper
         min-width: 220px
   .footer
-    &__social
-      &-link
-        &:hover
-          transform: scale(1)
+    &-communication
+      &__social
+        &-link
+          &:hover
+            transform: scale(1)
 @media (max-width: 610px)
   .container
      width: 88%
@@ -431,14 +433,15 @@
         flex-basis: 100%
         margin-bottom: 25px
         width: auto
-    &__logo
-      display: none
-    &__list
-      flex-wrap: wrap
-      justify-content: flex-start
-    &__link
-      margin-bottom: 15px
-      flex-basis: 50%
+    &-communication
+      &__logo
+        display: none
+      &__list
+        flex-wrap: wrap
+        justify-content: flex-start
+      &__link
+        margin-bottom: 15px
+        flex-basis: 50%
 @media (max-width: 470px)
   .main
     &-article
