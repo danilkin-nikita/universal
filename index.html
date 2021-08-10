@@ -114,7 +114,7 @@
               <h1 class="main-article__title">
                 Как использовать CSS float после того, как вышел Flexbox
               </h1>
-              <a href="article.html" class="button main-article__button">
+              <a href="news-1.html" class="button main-article__button">
                 <span class="button__text">Читать далее</span>
                 <div class="button__icon">
                   <svg class="icon">
@@ -151,7 +151,7 @@
               <h1 class="main-article__title">
                 Расширение Chrome защищает от атак
               </h1>
-              <a href="article.html" class="button main-article__button">
+              <a href="news-1.html" class="button main-article__button">
                 <span class="button__text">Читать далее</span>
                 <div class="button__icon">
                   <svg class="icon">
@@ -188,7 +188,7 @@
               <h1 class="main-article__title">
                 Правильно вставляем картинку на сайт для Retina дисплея
               </h1>
-              <a href="article.html" class="button main-article__button">
+              <a href="news-1.html" class="button main-article__button">
                 <span class="button__text">Читать далее</span>
                 <div class="button__icon">
                   <svg class="icon">
@@ -223,7 +223,7 @@
             <div class="main-article__wrapper">
               <span class="main-article__category">WEB DESIGN</span>
               <h1 class="main-article__title">ТОП-10 плагинов для Figma</h1>
-              <a href="article.html" class="button main-article__button">
+              <a href="news-1.html" class="button main-article__button">
                 <span class="button__text">Читать далее</span>
                 <div class="button__icon">
                   <svg class="icon">
@@ -260,7 +260,7 @@
               <h1 class="main-article__title">
                 Возможности CSS Grid Layout , которые уже можно применять
               </h1>
-              <a href="article.html" class="button main-article__button">
+              <a href="news-1.html" class="button main-article__button">
                 <span class="button__text">Читать далее</span>
                 <div class="button__icon">
                   <svg class="icon">
@@ -605,7 +605,7 @@
           <h2 class="main-news__title">
             Расследование недели: сколько зарабатывает веб разработчик в Москве
           </h2>
-          <a href="article.html" class="button main-news__button">
+          <a href="news-1.html" class="button main-news__button">
             <span class="button__text">Читать статью</span>
             <div class="button__icon">
               <svg class="icon">
@@ -1201,7 +1201,7 @@
               </p>
             </div>
             <!-- /.useful-article__wrapper -->
-            <a href="article.html" class="button useful-article__button">
+            <a href="news-1.html" class="button useful-article__button">
               <span class="button__text">Читать далее</span>
               <div class="button__icon">
                 <svg class="icon">
@@ -1463,19 +1463,24 @@
             <option value="Публикация новости">Публикация новости</option>
           </select>
           <span class="modal__text">Сообщение</span>
-          <textarea name="message" class="modal__message"></textarea>
+          <div class="input-wrapper">
+            <textarea name="message" class="modal__message" required></textarea>
+          </div>
           <span class="modal__text">Email</span>
-          <input
-            type="email"
-            name="email"
-            class="modal__input input"
-            required
-          />
-          <div class="modal__checkbox-wrapper">
+          <div class="input-wrapper">
+            <input
+              type="email"
+              name="email"
+              class="modal__input input"
+              required
+            />
+          </div>
+          <div class="modal__checkbox-wrapper input-wrapper">
             <input
               class="modal__checkbox"
               type="checkbox"
               id="processing"
+              name="processing"
               required
             />
             <label class="modal__checkbox-text" for="processing"
@@ -1489,11 +1494,13 @@
       <div class="modal__status">
         <button class="modal__close"></button>
         <h3 class="modal__title">Статус отправки</h3>
-        <div class="modal__status-message">Тестовый текст</div>
+        <div class="modal__status-message"></div>
         <button class="modal__status-button button">Ок</button>
       </div>
     </div>
     <!-- /.modal -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>

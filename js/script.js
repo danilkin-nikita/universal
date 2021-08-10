@@ -89,7 +89,10 @@ const navigation = () => {
       menuButton.classList.toggle("burger-button--active");
       document.body.classList.toggle("scroll-menu");
     }
-    if (target.closest(".scroll-link")) {
+    if (
+      target.closest(".scroll-link") ||
+      target.closest(".comments-article__button")
+    ) {
       event.preventDefault();
       moveToAnchor(target.closest("a"));
     }
@@ -195,3 +198,41 @@ const sendForm = () => {
 };
 
 sendForm();
+
+const showingComments = () => {
+  const commentsButton = document.querySelector(".comments-button");
+  const comment = document.querySelectorAll(".comment");
+
+  commentsButton.addEventListener("click", () => {
+    comment.forEach((element) => {
+      element.classList.remove("comment--hidden");
+      commentsButton.style.display = "none";
+    });
+  });
+};
+
+if (document.querySelector(".comments-button")) {
+  showingComments();
+}
+
+$("form").each(function () {
+  $(this).validate({
+    errorClass: "invalid",
+    messages: {
+      email: {
+        required: "Пожалуйста, укажите email",
+        email: "Email формат: name@domain.com",
+      },
+      message: {
+        required: "Пожалуйста, оставьте сообщение",
+      },
+      processing: {
+        required: "Пожалуйста, потвердите согласие",
+      },
+      comment: {
+        required: "Поле не может быть пустым",
+        minlength: "Минимальная длина символов - 100",
+      },
+    },
+  });
+});

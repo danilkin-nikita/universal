@@ -4,11 +4,10 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
 $theme = $_POST['theme'];
 $email = $_POST['email'];
+$message = $_POST['message'];
+$comment = $_POST['comment'];
 
 // Формирование самого письма
 if (isset($theme) and isset($message) and isset($email)) {
@@ -18,11 +17,17 @@ if (isset($theme) and isset($message) and isset($email)) {
     <b>Сообщение:</b><br>$message<br><br>
     <b>Email:</b> $email
     ";
-} else {
+} else if (isset($email)) {
     $title = "Новая подписка на рассылку";
     $body = "
     <h2>Подписка</h2>
     <b>Email:</b> $email
+    ";
+} else {
+    $title = "Новый комментарий";
+    $body = "
+    <h2>Комментарий</h2>
+    $comment
     ";
 }
 

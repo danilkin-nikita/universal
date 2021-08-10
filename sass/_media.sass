@@ -94,6 +94,8 @@
     &__form
       margin-right: auto
       margin-left: auto
+  .error-block
+    width: auto
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -367,6 +369,12 @@
       &__message
         &-wrapper
           width: 400px
+  .error-block
+    &__title
+      font-size: 36px
+  .smail-sad
+    width: 220px
+    height: 220px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -435,6 +443,16 @@
       &__message
         &-wrapper
           width: 420px
+  .error-block
+    flex-direction: column-reverse
+    &__title
+      width: auto
+      font-size: 24px
+      line-height: 34px
+      text-align: center
+      margin-top: 10px
+    &__button
+      margin: auto
 @media (max-width: 610px)
   .container
      width: 88%
