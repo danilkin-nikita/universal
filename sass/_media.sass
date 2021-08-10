@@ -87,6 +87,13 @@
   .other-news
     &__wrapper
       min-height: 100px
+  .comments-article
+    &__container
+      margin-left: 0
+  .comment-wrapper
+    &__form
+      margin-right: auto
+      margin-left: auto
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -345,6 +352,21 @@
   .main
     padding-top: 30px
     margin-top: 0
+  .comment
+    &__text
+      width: 100%
+  .comments
+    &-article
+      &__count
+        font-size: 30px
+      &__title
+        font-size: 30px
+    &-form
+      max-width: none
+      width: 80%
+      &__message
+        &-wrapper
+          width: 400px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -406,6 +428,13 @@
           left: 10px
         &-next
           right: 10px
+  .comments
+    &-form
+      max-width: none
+      width: 100%
+      &__message
+        &-wrapper
+          width: 420px
 @media (max-width: 610px)
   .container
      width: 88%
@@ -545,6 +574,13 @@
         margin-bottom: 0
         margin-right: 20px
   .content
+    &__text
+      font-size: 14px
+      margin-bottom: 15px
+    &__quote
+      font-size: 16px
+      margin-top: 20px
+      margin-bottom: 20px
     &-slider
       &__wrapper
         flex-wrap: wrap
@@ -559,6 +595,49 @@
         padding: 10px
       &__author
         border-left: none
+  .comment
+    &-reply
+      padding-left: 60px
+    &__img
+      &-wrapper
+        min-width: 45px
+        min-height: 45px
+        max-width: 45px
+        max-height: 45px
+    &__text
+      font-size: 14px
+      line-height: 22px
+    &__name
+        font-size: 14px
+  .comments
+    &-article
+      padding-top: 40px
+      padding-bottom: 0
+      &__container
+        width: 100%
+      &__wrapper
+        flex-wrap: wrap
+      &__title
+        font-size: 22px
+      &__count
+        font-size: 22px
+        &-wrapper
+          flex-basis: 100%
+          margin-bottom: 15px
+    &-form
+      max-width: none
+      width: 100%
+      &__image
+        &-wrapper
+          min-width: 45px
+          min-height: 45px
+          max-width: 45px
+          max-height: 45px
+      &__message
+        &-wrapper
+          width: 100%
+      &__title
+        font-size: 18px
 @media (max-width: 470px)
   .main
     &-article
@@ -653,6 +732,42 @@
         width: 130px
         &:last-child
           margin-bottom: 0
+  .footer
+    &-form
+      &__title
+        text-align: center
+  .comments
+    &-form
+      padding: 15px
+      flex-direction: column
+      align-items: center
+      &__message
+        &-wrapper
+          &::before
+            content: ''
+            border: 10px solid transparent
+            border-bottom: 10px solid #D9DADB
+            position: absolute
+            top: -11px
+            left: 50%
+            transform: translateX(-50%)
+          &::after
+            content: ''
+            border: 10px solid transparent
+            border-bottom: 10px solid $light
+            position: absolute
+            top: -9px
+            left: 50%
+            transform: translateX(-50%)
+      &__image
+        &-wrapper
+          margin-top: 0
+          margin-right: 0
+          margin-bottom: 15px
+      &__title
+        display: none
+      &__wrapper
+        width: 95%
 @media (max-width: 360px)
   .footer
     &-nav
