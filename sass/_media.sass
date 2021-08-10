@@ -84,6 +84,9 @@
       &__image
         &-wrapper
           height: 450px
+  .other-news
+    &__wrapper
+      min-height: 100px
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -271,11 +274,6 @@
     float: right
     margin-left: 25px
     margin-bottom: 25px
-@media (max-width: 768px)
-  body
-    margin-top: 56px
-  .container
-    max-width: 576px
   .navbar
     position: fixed
     top: 0
@@ -342,9 +340,15 @@
     &--dark
       &::after, &::before, & .burger-button__line
         background-color: $dark
+  body
+    margin-top: 56px
   .main
     padding-top: 30px
     margin-top: 0
+@media (max-width: 768px)
+  .container
+    max-width: 576px
+  .main
     &__wrapper
       height: 405px
     &-article
@@ -394,6 +398,14 @@
       &__image
         &-wrapper
           height: 370px
+      &__button
+        &-prev, &-next
+          width: 40px
+          height: 40px
+        &-prev
+          left: 10px
+        &-next
+          right: 10px
 @media (max-width: 610px)
   .container
      width: 88%
@@ -543,6 +555,8 @@
         padding-right: 15px
         padding-top: 15px
         padding-bottom: 15px
+        font-size: 11px
+        padding: 10px
       &__author
         border-left: none
 @media (max-width: 470px)
