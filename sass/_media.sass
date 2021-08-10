@@ -1,6 +1,8 @@
 @media (max-width: 1200px)
   .container
     max-width: 960px
+    &--small
+      max-width: 622px
   .navbar
     &__button
       width: 200px
@@ -67,6 +69,21 @@
     &-nav
       grid-template-columns: repeat(6, 1fr)
       margin-bottom: 0
+  .container
+    &--small
+      margin-left: 0
+  .main-screen
+    &__bookmark
+      left: auto
+      right: 40px
+      top: 35px
+  .content
+    &__materials
+      right: 0
+    &-slider
+      &__image
+        &-wrapper
+          height: 450px
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -217,6 +234,43 @@
         flex-basis: 100%
       &__link
         margin-right: 0
+  .main-screen
+    padding-bottom: 115px
+    &__bookmark
+      position: static
+      margin-bottom: 10px
+    &__author
+      right: 50%
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -330px
+    &__title
+      width: auto
+      font-size: 40px
+      line-height: 50px
+    &__text
+      width: auto
+  .bookmark
+    fill: #939699 !important
+  .container
+    &--small
+      max-width: 600px
+  .content
+    padding-top: 245px
+    padding-bottom: 30px
+  .main-screen
+    &__link
+      color: $light !important
+    &__icon, &__icon-left, &__icon-right
+      fill: $light !important
+  .other-news
+    &__item
+      grid-column: span 2
+  .materials
+    position: static
+    float: right
+    margin-left: 25px
+    margin-bottom: 25px
 @media (max-width: 768px)
   body
     margin-top: 56px
@@ -285,6 +339,9 @@
         transform: rotate(38deg)
         bottom: 5px
         transition: 0.4s
+    &--dark
+      &::after, &::before, & .burger-button__line
+        background-color: $dark
   .main
     padding-top: 30px
     margin-top: 0
@@ -330,6 +387,13 @@
         &-link
           &:hover
             transform: scale(1)
+  .content
+    &-slider
+      &__text
+        margin-right: 10px
+      &__image
+        &-wrapper
+          height: 370px
 @media (max-width: 610px)
   .container
      width: 88%
@@ -442,6 +506,45 @@
       &__link
         margin-bottom: 15px
         flex-basis: 50%
+  .main-screen
+    &__title
+      font-size: 30px
+      line-height: 40px
+  .materials
+    float: none
+    order: 1
+    margin-left: 0
+  .container
+    &--small, &--middle
+      width: 100%
+  .other-news
+    &__item
+      grid-column: span 4
+      display: flex
+    &__image
+      min-height: 100%
+      min-width: 100%
+      object-fit: cover
+      &-wrapper
+        min-height: 150px
+        min-width: 150px
+        max-height: 150px
+        max-width: 150px
+        margin-bottom: 0
+        margin-right: 20px
+  .content
+    &-slider
+      &__wrapper
+        flex-wrap: wrap
+      &__text
+        border-bottom: 1px solid #D9DADB
+        flex-basis: 100%
+        margin-right: 0
+        padding-right: 15px
+        padding-top: 15px
+        padding-bottom: 15px
+      &__author
+        border-left: none
 @media (max-width: 470px)
   .main
     &-article
@@ -501,10 +604,41 @@
     grid-row: 4 / 5
     padding: 30px
   .modal
-    &__dialog
+    &__dialog, &__status
       max-width: 85%
       min-width: 85%
       padding: 25px
+  .main-screen
+    padding-top: 30px
+    &__top
+      flex-wrap: wrap
+    &__category
+      flex-basis: 100%
+      order: 1
+    &__wrapper
+      width: 100%
+      margin-bottom: 50px
+    &__home
+      margin-right: auto
+  .content
+    &__tags
+      flex-wrap: wrap
+    &-social
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__title
+        font-size: 24px
+      &__wrapper
+        flex-wrap: wrap
+        justify-content: center
+      &__button
+        flex-basis: 55%
+        margin-bottom: 25px
+        margin-right: 0 !important
+        width: 130px
+        &:last-child
+          margin-bottom: 0
 @media (max-width: 360px)
   .footer
     &-nav

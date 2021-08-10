@@ -20,12 +20,14 @@ const tabs = () => {
   tabHeader.addEventListener("click", (event) => {
     let target = event.target;
     target = target.closest(".recommendations__item");
-    console.log(target);
+
     toggleTabContent(tab.indexOf(target));
   });
 };
 
-tabs();
+if (document.querySelector(".recommendations__list")) {
+  tabs();
+}
 
 const addToBookmarks = () => {
   document.addEventListener("click", (event) => {
@@ -52,6 +54,17 @@ const articlesSlider = new Swiper(".articles-slider", {
   effect: "fade",
 });
 
+const contentSlider = new Swiper(".content-slider__container", {
+  loop: true,
+  navigation: {
+    nextEl: ".content-slider__button-next",
+    prevEl: ".content-slider__button-prev",
+  },
+  keyboard: {
+    enabled: true,
+  },
+});
+
 const navigation = () => {
   let menuButton = document.querySelector(".burger-button"),
     navbarMenu = document.querySelector(".mobile-menu");
@@ -70,7 +83,7 @@ const navigation = () => {
 
     if (
       target.closest(".burger-button") ||
-      target.closest(".mobile-menu__link")
+      target.closest(".mobile-menu__item")
     ) {
       navbarMenu.classList.toggle("mobile-menu--active");
       menuButton.classList.toggle("burger-button--active");

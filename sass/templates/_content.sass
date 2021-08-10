@@ -1,0 +1,196 @@
+.container
+  &--small
+    max-width: 622px
+    margin-left: 95px
+.content
+  background-color: $light
+  padding-top: 60px
+  padding-bottom: 60px
+  & .container .container--middle
+    position: relative
+    margin: 0
+  &__initial-cap
+    width: 96px
+    height: 75px
+    float: left
+    margin-right: 10px
+  &__title
+    font-family: 'RobotoSlabBold'
+    font-weight: bold
+    font-size: 25px
+    line-height: 30px
+    margin-top: 45px
+    margin-bottom: 30px
+    color: $dark
+  &__text
+    font-size: 18px
+    line-height: 30px
+    margin-bottom: 30px
+    margin-top: 0
+  &__quote
+    position: relative
+    font-family: 'RobotoSlabBold'
+    font-weight: bold
+    font-size: 25px
+    line-height: 30px
+    color: $dark
+    z-index: 1
+    margin-top: 80px
+    margin-bottom: 45px
+    &::after
+      position: absolute
+      top: -20px
+      left: -20px
+      width: 70px
+      height: 70px
+      content: ''
+      background-image: url(../img/content/quote.svg)
+      z-index: -1
+  &__tags
+    display: flex
+    align-items: center
+    padding-top: 15px
+    padding-bottom: 15px
+    margin-bottom: 27px
+  &__slider
+    margin-top: 60px
+  &-slider
+    border-top-left-radius: $rounding-block
+    border-top-right-radius: $rounding-block
+    overflow: hidden
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+        &__image-wrapper
+          max-height: 555px
+          position: relative
+    &__wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border: 1px solid #D9DADB
+      border-bottom-left-radius: $rounding-block
+      border-bottom-right-radius: $rounding-block
+      margin-bottom: 45px
+    &__text
+      font-size: 14px
+      line-height: 20px
+      padding-left: 35px
+    &__author
+      display: flex
+      align-items: center
+      border-left: 1px solid #D9DADB
+      width: 262px
+      padding-left: 30px
+      padding-top: 12px
+      padding-bottom: 13px
+      &-avatar
+        width: 45px
+        height: 45px
+        object-fit: cover
+        margin-right: 10px
+        border-radius: 50%
+      &-name
+        font-size: 14px
+        line-height: 20px
+        color: $text-color
+        margin-bottom: 2px
+        margin-top: 0
+      &-position
+        font-size: 12px
+        line-height: 15px
+        color: #939699
+    &__button
+      &-prev, &-next
+        top: 50%
+        transform: translateY(-50%)
+        width: 60px
+        height: 60px
+        position: absolute
+        background-image: url(../img/content/arrow.svg)
+        z-index: 2
+        cursor: pointer
+      &-next
+        right: 35px
+      &-prev
+        left: 35px
+        transform: translateY(-50%) rotate(180deg)
+  &-social
+    padding-top: 30px
+    padding-bottom: 30px
+    border-top: 1px solid #D9DADB
+    &__title
+      font-family: 'RobotoSlabBold'
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      margin-top: 0
+      margin-bottom: 25px
+      color: $dark
+    &__wrapper
+      display: flex
+    &__button
+      width: 129px
+      height: 40px
+      &:not(:last-child)
+        margin-right: 17px
+    &__icon
+      width: 20px
+      height: 20px
+      fill: $light
+      margin-right: 8px
+    &__text
+      font-family: 'LatoBold'
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      margin-right: 8px
+    &__num
+      font-size: 14px
+      line-height: 20px
+      color: $light
+      &--red
+        color: #FFC4C9
+      &--violet
+      color: #BBC6FF
+      &--blue
+      color: #C5E4FC
+  &__materials
+    position: absolute
+    right: -100px
+    top: 135px
+.materials
+  display: flex
+  flex-direction: column
+  width: 263px
+  &__title
+    display: block
+    font-family: 'RobotoSlabBold'
+    font-weight: bold
+    font-size: 20px
+    line-height: 25px
+    color: $dark
+    margin-top: 0
+    margin-bottom: 20px
+  &__image
+    height: 180px
+    width: 263px
+    object-fit: cover
+    margin-bottom: 15px
+    overflow: hidden
+    border-radius: $rounding-block
+  &__link
+    font-family: 'RobotoSlabBold'
+    font-weight: bold
+    font-size: 16px
+    line-height: 25px
+    color: $dark
+    margin-bottom: 5px
+  &__text
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    margin-top: 0
+    margin-bottom: 20px

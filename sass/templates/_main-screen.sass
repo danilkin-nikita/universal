@@ -1,0 +1,164 @@
+.main-screen
+  position: relative
+  padding-top: 63px
+  padding-bottom: 69px
+  & .container
+    position: relative
+  &::after
+    content: ''
+    background-color: rgba(38, 45, 51, 0.75)
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+  &__image
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    object-fit: cover
+    width: 100%
+    height: 100%
+    z-index: -1
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 50px
+  &__category
+    display: block
+    font-family: 'LatoBold'
+    font-weight: 900
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    color: #4592FF
+  &__wrapper
+    display: flex
+    align-items: center
+  &__home, &__arrow-left, &__arrow-right
+    display: flex
+    &:hover
+      & div
+        fill: $primary
+      .main-screen__link
+        color: $primary
+  &__arrow
+    &-left
+      margin-right: 20px
+  &__home
+    margin-right: 30px
+  &__icon, &__icon-left, &__icon-right
+    width: 20px
+    height: 20px
+    fill: $light
+  &__icon
+    margin-right: 5px
+    &-left
+      transform: rotate(180deg)
+      margin-right: 5px
+    &-right
+      margin-left: 5px
+  &__link
+    font-family: 'LatoBold'
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    color: $light
+  &__title
+    font-family: 'RobotoSlabBold'
+    font-weight: bold
+    font-size: 55px
+    line-height: 70px
+    color: $light
+    margin-top: 0
+    margin-bottom: 30px
+    width: 750px
+  &__text
+    font-size: 18px
+    line-height: 30px
+    color: $light
+    opacity: 0.85
+    margin-top: 0
+    margin-bottom: 43px
+    width: 632px
+  &__data
+    display: flex
+    align-items: center
+    &-icon
+      width: 15px
+      height: 15px
+      margin-right: 5px
+    &-text
+      font-size: 12px
+      line-height: 15px
+      opacity: 0.50
+      color: $light
+  &__date
+    display: flex
+    align-items: center
+    margin-right: 20px
+  &__hearts
+    margin-right: 20px
+  &__content
+    position: relative
+  &__bookmark
+    position: absolute
+    top: 16px
+    left: -97px
+    width: 30px
+    height: 30px
+  &__author
+    position: absolute
+    bottom: -267px
+    right: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 264px
+    background-color: $light
+    padding-top: 35px
+    border: 1px solid #D9DADB
+    border-radius: $rounding-block
+    &-avatar
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      object-fit: cover
+      margin-bottom: 15px
+    &-name
+      font-family: 'RobotoSlabBold'
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      color: $dark
+      margin-top: 0
+      margin-bottom: 5px
+    &-position
+      display: block
+      font-size: 14px
+      line-height: 20px
+      margin-top: 0
+      margin-bottom: 15px
+    &-text
+      display: block
+      font-family: 'LatoBold'
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      color: $dark
+      margin-bottom: 20px
+    &-link
+      font-family: 'LatoBold'
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      color: $dark
+      width: 100%
+      border-top: 1px solid #D9DADB
+      padding-top: 15px
+      padding-bottom: 15px
+      text-align: center

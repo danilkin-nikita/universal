@@ -44,6 +44,8 @@ a
     display: flex
     justify-content: space-between
     align-items: start
+  &--middle
+    max-width: 946px
 .button
   display: flex
   align-items: center
@@ -56,6 +58,7 @@ a
   border-radius: 20px
   padding: 0
   transition: 0.3s
+  cursor: pointer
   &:hover
     background-color: $hoverPrimary
     transition: 0.3s
@@ -64,6 +67,7 @@ a
   &__icon
     width: 20px
     height: 20px
+    fill: $light
   &__count
     font-size: 14px
     line-height: 20px

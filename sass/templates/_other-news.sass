@@ -1,0 +1,45 @@
+.other-news
+  background-color: $secondary
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 30px
+  padding-top: 60px
+  padding-bottom: 90px
+  &__image
+    height: 100%
+    width: 100%
+    object-fit: cover
+    &-wrapper
+      margin-bottom: 15px
+      border-radius: $rounding-block
+      overflow: hidden
+      height: 180px
+  &__title
+    font-family: 'RobotoSlabBold'
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 25px
+    color: $dark
+    margin-top: 0
+    margin-bottom: 15px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.data
+  display: flex
+  align-items: center
+  &__icon
+    width: 15px
+    height: 15px
+    fill: #BCBFC2
+    margin-right: 5px
+  &__item
+    display: flex
+    align-items: center
+    margin-right: 10px
+  &__text
+    font-size: 12px
+    line-height: 15px
+    color: #939699

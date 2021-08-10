@@ -1,6 +1,8 @@
 .navbar
   background-color: $dark
   padding: 15px 0 15px 0
+  &--light
+    background-color: $light
   &__container
     display: flex
     align-items: center
@@ -22,6 +24,8 @@
       font-size: 14px
       line-height: 20px
       color: $light
+      &--light
+        color: #939699
       &::after
         content: ''
         position: absolute
@@ -93,6 +97,20 @@
       color: $light
     &__item
       margin-bottom: 25px
+    &__button
+      width: 261px
+      height: 39px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #656B70
+      color: $light
+      font-size: 14px
+      line-height: 20px
+      text-transform: uppercase
+      border: none
+      border-radius: $rounding-block
+      padding: 0
   &-menu
     &--active
       right: 0
