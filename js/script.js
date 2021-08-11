@@ -72,10 +72,17 @@ const navigation = () => {
   const moveToAnchor = (item) => {
     const blockID = item.getAttribute("href").substr(1);
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    if (document.getElementById(blockID)) {
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      document.getElementById("footer").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   document.addEventListener("click", (event) => {
@@ -89,10 +96,7 @@ const navigation = () => {
       menuButton.classList.toggle("burger-button--active");
       document.body.classList.toggle("scroll-menu");
     }
-    if (
-      target.closest(".scroll-link") ||
-      target.closest(".comments-article__button")
-    ) {
+    if (target.closest(".scroll-link")) {
       event.preventDefault();
       moveToAnchor(target.closest("a"));
     }
@@ -236,3 +240,17 @@ $("form").each(function () {
     },
   });
 });
+
+const moveUp = () => {
+  let toTopBtn = document.querySelector(".to-top");
+
+  document.addEventListener("scroll", () => {
+    if (pageYOffset >= 650) {
+      toTopBtn.classList.add("to-top--active");
+    } else {
+      toTopBtn.classList.remove("to-top--active");
+    }
+  });
+};
+
+moveUp();

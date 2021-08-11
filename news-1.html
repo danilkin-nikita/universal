@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body id="header">
     <header class="navbar navbar--light">
       <div class="container navbar__container">
         <a href="index.html" class="logo">
@@ -39,22 +39,30 @@
               >
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link navbar-menu__link--light"
+              <a
+                href="#"
+                class="navbar-menu__link navbar-menu__link--light scroll-link"
                 >HTML</a
               >
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link navbar-menu__link--light"
+              <a
+                href="#"
+                class="navbar-menu__link navbar-menu__link--light scroll-link"
                 >CSS</a
               >
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link navbar-menu__link--light"
+              <a
+                href="#"
+                class="navbar-menu__link navbar-menu__link--light scroll-link"
                 >JavaScript</a
               >
             </li>
             <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link navbar-menu__link--light"
+              <a
+                href="#"
+                class="navbar-menu__link navbar-menu__link--light scroll-link"
                 >Web Design</a
               >
             </li>
@@ -83,16 +91,16 @@
           <a href="#hotter" class="mobile-menu__link scroll-link">Горячее</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#" class="mobile-menu__link">HTML</a>
+          <a href="#" class="mobile-menu__link scroll-link">HTML</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#" class="mobile-menu__link">CSS</a>
+          <a href="#" class="mobile-menu__link scroll-link">CSS</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#" class="mobile-menu__link">JavaScript</a>
+          <a href="#" class="mobile-menu__link scroll-link">JavaScript</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#" class="mobile-menu__link">Web Design</a>
+          <a href="#" class="mobile-menu__link scroll-link">Web Design</a>
         </li>
         <li class="mobile-menu__item">
           <button class="mobile-menu__button" data-toggle="modal">
@@ -595,7 +603,7 @@
               </div>
               <a
                 href="#comment"
-                class="comments-article__button button-primary"
+                class="comments-article__button button-primary scroll-link"
               >
                 <div class="button-primary__icon">
                   <svg class="icon">
@@ -988,7 +996,7 @@
         <!-- /.container -->
       </div>
     </section>
-    <footer>
+    <footer id="footer">
       <div class="container">
         <form class="footer-form">
           <h2 class="footer-form__title">Подпишитесь на нашу рассылку</h2>
@@ -1242,6 +1250,11 @@
       </div>
     </div>
     <!-- /.modal -->
+    <a href="#header" class="to-top scroll-link">
+      <svg class="to-top__icon">
+        <use xlink:href="img/sprite.svg#arrow"></use>
+      </svg>
+    </a>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

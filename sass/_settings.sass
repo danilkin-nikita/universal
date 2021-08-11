@@ -177,3 +177,26 @@ label.invalid
   bottom: -22px
 .comments-form__message-wrapper label.invalid
   bottom: -18px
+.to-top 
+  position: fixed
+  bottom: -60px
+  right: 50px
+  box-shadow: 0 1px 120px rgba(161, 161, 161, 0.08)
+  border-radius: 50%
+  background-color: $primary
+  padding: 10px
+  transition: 0.2s linear
+  height: 50px
+  width: 50px
+  z-index: 90
+  &:hover
+    background-color: $hoverPrimary
+    transition: 0.3s
+  &--active
+    bottom: 40px
+    transition: bottom 0.2s linear
+  &__icon
+    width: 30px
+    height: 30px
+    transform: rotate(-90deg)
+    fill: $light
