@@ -133,6 +133,11 @@
       height: 90px
       &:last-child
         height: 90px
+      &:hover
+        background-color: $light
+      &--active
+        &:hover
+          background-color: #e9f1fa
   .link
     &:hover
       color: $dark
@@ -358,6 +363,19 @@
     &__text
       width: 100%
   .comments
+    &:hover
+      .comments
+        &__icon .icon
+          fill: #BCBFC2 !important
+        &__count
+          color: #939699
+  .hearts
+    &:hover
+      .hearts
+        &__icon .icon
+          fill: #BCBFC2 !important
+        &__count
+          color: #939699
     &-article
       &__count
         font-size: 30px
@@ -378,6 +396,31 @@
   .to-top
     &:hover
       background-color: $primary
+  .button
+    &-primary
+      &:hover
+        .button
+          &-primary
+            &__text
+              color: $dark
+  .comment
+    &__like
+      &-icon
+        &:hover
+          fill: #BCBFC2
+    &__answer
+      &:hover
+        .comment__answer
+          &-icon .icon
+            fill: #BCBFC2
+          &-text
+            color: #262D33
+  .footer
+    &-communication
+      &__social
+        &-link
+          &:hover
+            transform: scale(1)
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -418,12 +461,6 @@
     &__image
       &-wrapper
         min-width: 220px
-  .footer
-    &-communication
-      &__social
-        &-link
-          &:hover
-            transform: scale(1)
   .content
     &-slider
       &__text
